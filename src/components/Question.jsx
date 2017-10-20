@@ -18,7 +18,7 @@ class Question extends Component{
         return(
             <div>
                 <h3>{question.question}</h3>
-                <hr />
+                
                 <ul className="list">
                     {
                         this.props.question.choices.map((choice) => {

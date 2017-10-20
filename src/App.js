@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import data from './data/quiz';
 import QuestionList from './components/QuestionList';
 import Scorebox from './components/Scorebox';
 import Results from './components/Results';
+import { Container, Header } from 'semantic-ui-react';
+
 
 class App extends Component {
   constructor(props){
@@ -38,19 +39,23 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-
-        {scorebox}
-
-        <QuestionList 
-          {...this.state} 
-          setCurrent={this.setCurrent.bind(this)}
-          setScore={this.setScore.bind(this)}
-        />
-        {results}
+        <Container>
+          <Header as='h1' className="test">Quiz App</Header>
+          <hr />
+          <div className="scorebox">
+            {scorebox}
+          </div>
+          <div className="questionlist">
+            <QuestionList 
+              {...this.state} 
+              setCurrent={this.setCurrent.bind(this)}
+              setScore={this.setScore.bind(this)}
+            />
+          </div>
+          <div className="results">
+            {results}
+          </div>
+        </Container>
       </div>
     );
   }
