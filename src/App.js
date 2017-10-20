@@ -40,7 +40,9 @@ class App extends Component {
     return (
       <div className="App">
         <Container>
-          <Header as='h1' className="test">Quiz App</Header>
+          <header>
+            <h1 className="title">Quiz App</h1>
+          </header>
           <hr />
           <div className="scorebox">
             {scorebox}

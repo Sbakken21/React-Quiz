@@ -17,7 +17,9 @@ class Question extends Component{
         const {question} = this.props;
         return(
             <div>
-                <h3>{question.question}</h3>
+                <div className="question-title">
+                    {question.question}
+                </div>
                 
                 <ul className="list">
                     {
