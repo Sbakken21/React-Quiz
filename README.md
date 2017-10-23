@@ -1,6 +1,6 @@
-A Quiz app made using React
+## A Quiz app made using React
 
-TODO:
+### TODO:
 
--Style using semantic-ui-react
--Display wrong/correct answers
+* When answered, display correct and incorrect answers
+* Instead of automatically going to the next question, have a button the allows you to go next

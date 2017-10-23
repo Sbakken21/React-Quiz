@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class Results extends Component {
     render(){
-        let percent = (this.props.score / this.props.questions.length * 100);
+        let percent = (this.props.score / this.props.questions.length * 100).toFixed(2);
         if(percent > 80){
             var message = 'Good Job!';
         } else if(percent < 80 && percent > 60){

@@ -44,7 +44,7 @@ class App extends Component {
             <h1 className="title">Quiz App</h1>
           </header>
           <hr />
-          <div className="scorebox">
+          <div className="scorebox ui right floated">
             {scorebox}
           </div>
           <div className="questionlist">

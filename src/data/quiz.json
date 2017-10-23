@@ -1,20 +1,26 @@
 [
     {
         "id": 1,
-        "question": "What is your name?",
-        "choices": ["Steve", "Bob", "Skyler", "Brad"],
-        "correct": "Skyler"
+        "question": "What is React?",
+        "choices": ["Framework", "Library", "Language", "MVC based framework"],
+        "correct": "Library"
     },
     {
         "id": 2,
-        "question": "this is a question2",
-        "choices": ["Choice1", "Choice2", "Choice3", "Choice4"],
-        "correct": "Choice2"
+        "question": "React was developed by",
+        "choices": ["Facebook", "Google", "Microsoft", "Apple"],
+        "correct": "Facebook"
     },
     {
         "id": 3,
-        "question": "What is this question?",
-        "choices": ["A", "B", "C", "D"],
-        "correct": "C"
+        "question": "React is considered to be what part of MVC?",
+        "choices": ["M (Model)", "V (View)", "C (Controller)"],
+        "correct": "V (View)"
+    },
+    {
+        "id": 4,
+        "question": "What is the HTML-like syntax used by React?",
+        "choices": ["JSX", "Jinja2", "Typescript", "Angular"],
+        "correct": "JSX"
     }
 ]

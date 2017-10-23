@@ -13,22 +13,62 @@ class Question extends Component{
 
         setCurrent(this.props.current+1);
     }
+
+
+    correctChoice(e){
+        e.preventDefault();
+        const {setCurrent, setScore} = this.props;
+        setScore(this.props.score+1);
+        setCurrent(this.props.current+1);
+        // load function that shows message "Correct!" and loads a button to "go next"(setCurrent +1)
+    }
+
+    wrongChoice(e){
+        e.preventDefault();
+        const {setCurrent, setScore} = this.props;
+        setCurrent(this.props.current+1);
+    }
+
     render(){
         const {question} = this.props;
+
+        function shuffle(choices) {
+            let i = choices.length -1;
+            for (; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i+1));
+                const temp = choices[i];
+                choices[i] = choices[j];
+                choices[j] = temp;
+            }
+            return choices
+        }
+
+        const shuffledChoices = shuffle(this.props.question.choices);
+
         return(
             <div>
                 <div className="question-title">
                     {question.question}
                 </div>
                 
-                <ul className="list">
+                <ul className="divided list">
                     {
-                        this.props.question.choices.map((choice) => {
-                            return(
-                                <li className="list-group-item">
-                                    <input type="radio" onChange={this.onChange.bind(this)} name={question.id} value={choice} />{choice}
-                                </li>
-                            )
+                        shuffledChoices.map((choice) => {
+                            if (question.correct === choice) {
+                                return(
+                                    <li className="item"
+                                        onClick= {this.correctChoice.bind(this)}>
+                                        <a href="">{choice}</a>
+                                    </li>
+                                )
+                            } else {
+                                return(
+                                    <li className="item"
+                                        onClick= {this.wrongChoice.bind(this)}>
+                                        <a href="">{choice}</a>
+                                    </li>
+                                )
+                            }
                         })
                     }
                 </ul>
