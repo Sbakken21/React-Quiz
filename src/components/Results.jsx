@@ -4,11 +4,11 @@ class Results extends Component {
     render(){
         let percent = (this.props.score / this.props.questions.length * 100).toFixed(2);
         if(percent > 80){
-            var message = 'Good Job!';
+            let message = 'Good Job!';
         } else if(percent < 80 && percent > 60){
-            var message = 'Not Bad';
+            let message = 'Not Bad';
         } else {
-            var message = 'Try Again';
+            let message = 'Try Again';
         }
         return(
             <div>
