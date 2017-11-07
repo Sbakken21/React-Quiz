@@ -15,7 +15,7 @@ class Results extends Component {
                 <h4>You got {this.props.score} out of {this.props.questions.length} Correct</h4>
                 <h1>{percent}% - {message}</h1>
                 <hr/>
-                <a href="/app">Retake</a>
+                <a href="/app" className="ui button">Retake</a>
             </div>
         );
     }

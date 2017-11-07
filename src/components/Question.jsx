@@ -56,17 +56,17 @@ class Question extends Component{
                         shuffledChoices.map((choice) => {
                             if (question.correct === choice) {
                                 return(
-                                    <li className="item"
+                                    <a href="" className="item-choice"><li className="item"
                                         onClick= {this.correctChoice.bind(this)}>
-                                        <a href="">{choice}</a>
-                                    </li>
+                                        {choice}
+                                    </li></a>
                                 )
                             } else {
                                 return(
-                                    <li className="item"
+                                    <a href="" className="item-choice"><li className="item"
                                         onClick= {this.wrongChoice.bind(this)}>
-                                        <a href="">{choice}</a>
-                                    </li>
+                                        {choice}
+                                    </li></a>
                                 )
                             }
                         })

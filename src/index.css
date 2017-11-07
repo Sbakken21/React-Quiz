@@ -19,10 +19,18 @@ ul.list li {
   margin-bottom: 10px;
 }
 
+.item:hover {
+  background-color: #ccc;
+}
+
 .score {
   text-align: left;
 }
 
 .stuff {
   float: right !important;
+}
+
+.item-choice:hover {
+  background-color: #fff;
 }
