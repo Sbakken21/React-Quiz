@@ -4,7 +4,7 @@ import data from './data/quiz';
 import QuestionList from './components/QuestionList';
 import Scorebox from './components/Scorebox';
 import Results from './components/Results';
-import { Container, Header } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 
 
 class App extends Component {
@@ -30,12 +30,14 @@ class App extends Component {
   }
 
   render() {
+    let scorebox;
+    let results;
     if(this.state.current > this.state.questions.length){
-      var scorebox = '';
-      var results = <Results {...this.state} />
+      scorebox = '';
+      results = <Results {...this.state} />
     } else {
-      var scorebox = <Scorebox {...this.state} />
-      var results = '';
+      scorebox = <Scorebox {...this.state} />
+      results = '';
     }
     return (
       <div className="App">

@@ -25,7 +25,7 @@ class Question extends Component{
 
     wrongChoice(e){
         e.preventDefault();
-        const {setCurrent, setScore} = this.props;
+        const {setCurrent} = this.props;
         setCurrent(this.props.current+1);
     }
 
@@ -53,17 +53,17 @@ class Question extends Component{
                 
                 <ul className="divided list">
                     {
-                        shuffledChoices.map((choice) => {
+                        shuffledChoices.map((choice, index) => {
                             if (question.correct === choice) {
                                 return(
-                                    <a href="" className="item-choice"><li className="item"
+                                    <a href="" key={index} className="item-choice"><li className="item"
                                         onClick= {this.correctChoice.bind(this)}>
                                         {choice}
                                     </li></a>
                                 )
                             } else {
                                 return(
-                                    <a href="" className="item-choice"><li className="item"
+                                    <a href="" key={index} className="item-choice"><li className="item"
                                         onClick= {this.wrongChoice.bind(this)}>
                                         {choice}
                                     </li></a>

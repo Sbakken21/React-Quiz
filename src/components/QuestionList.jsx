@@ -8,8 +8,9 @@ class QuestionList extends Component {
             <div className="questions">
                 <Container>
                     {
-                        this.props.questions.map(question => {
-                            if(question.id === this.props.current){
+                        this.props.questions
+                            .filter(question => question.id === this.props.current)
+                            .map((question) => {
                                 return (
                                     <Question
                                         question={question}
@@ -17,8 +18,7 @@ class QuestionList extends Component {
                                         {...this.props}
                                     />
                                 )
-                            }
-                        })
+                            })
                     }
                 </Container>
 
