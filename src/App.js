@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 import './App.css';
 import data from './data/quiz';
@@ -15,6 +16,10 @@ class App extends Component {
       score: 0,
       current: 1
     }
+
+    // Google Analytics
+    ReactGA.initialize('UA-111864610-2');
+    ReactGA.pageview(window.location.pathname);
   }
 
   setCurrent(current){
