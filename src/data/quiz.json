@@ -2,7 +2,7 @@
     {
         "id": 1,
         "question": "What is React?",
-        "choices": ["Framework", "Library", "Language", "MVC based framework"],
+        "choices": ["Text editor", "Library", "Language", "MVC framework"],
         "correct": "Library"
     },
     {
@@ -22,5 +22,11 @@
         "question": "What is the HTML-like syntax used by React?",
         "choices": ["JSX", "Jinja2", "Typescript", "Angular"],
         "correct": "JSX"
+    },
+    {
+        "id": 5,
+        "question": "Which of the following is used to pass the data from parent to child?",
+        "choices": ["State", "Props"],
+        "correct": "Props"
     }
 ]
