@@ -22,3 +22,7 @@ header {
   font-size: 30px;
   padding: 10px;
 }
+
+.question-title {
+  line-height: 1.3;
+}

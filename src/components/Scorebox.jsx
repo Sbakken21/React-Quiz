@@ -5,7 +5,7 @@ class Scorebox extends Component {
         return(
             <div className="score">
                 Question {this.props.current} out of {this.props.questions.length}
-                <span className="stuff"> Score: {this.props.score}</span>
+                <span className="score-box"> Score: {this.props.score}</span>
             </div>
         );
     }
