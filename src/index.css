@@ -15,6 +15,12 @@ ul.list li {
   border-color: #ccc;
 }
 
+ul.divided {
+  padding-left: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .item {
   margin-bottom: 10px;
 }
